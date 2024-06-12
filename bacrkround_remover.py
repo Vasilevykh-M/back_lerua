@@ -34,5 +34,7 @@ class RemoverKand():
 
     def remove_backgroud(self, img, type_img):
         img = self.resize_with_padding(img, type_img)
-        img = img.resize((512, 512), Image.Resampling.LANCZOS)
-        return self.remover.process(img, type='map'), img
+        img = img.resize((640, 640), Image.Resampling.LANCZOS)
+        mask = self.remover.process(img, type='map')
+        mask = ImageOps.invert(mask)
+        return mask, img
