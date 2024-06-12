@@ -17,7 +17,7 @@ class RemoverKand():
       if type_img == 1:
           border_pad = 0.75
       if type_img == 2:
-          border_pad = 0.5
+          border_pad = 0.25
       if type_img == 3:
           border_pad = 0
 
