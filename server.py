@@ -18,12 +18,12 @@ class GenerateApi:
     self.router = APIRouter()
     self.router.add_api_route("/generate_background", self.generate_background, methods=["POST"])
 
-  async def generate_background(self, text_response:str, img_file:UploadFile = File(...)):
+  async def generate_background(self, img_file:UploadFile = File(...)):
 
       if '.jpg' in img_file.filename or '.jpeg' in img_file.filename or '.png' in img_file.filename:
 
           img = load_image_into_numpy_array(await img_file.read())
-          result = self.generator(img, text_response)
+          result = self.generator(img)
           return str(result.tobytes())
       return  HTTPException(
         status_code=status.HTTP_415_UNSUPPORTED_MEDIA_TYPE,
