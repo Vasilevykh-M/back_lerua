@@ -24,7 +24,7 @@ class ClipModel:
         image = self.preprocess(image).unsqueeze(0).to(self.device)
         logits_per_image, logits_per_text = self.model(image, self.text)
         idx = torch.argmax(logits_per_image.softmax(dim=-1)).item()
-        probs = self.data_label[torch.argmax(logits_per_image.softmax(dim=-1)).item()]
+        probs = self.data_label[idx]
         img_group = 0
         if idx == 0 or idx == 1 or idx == 5:
             img_group = 0
