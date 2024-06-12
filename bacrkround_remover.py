@@ -6,10 +6,10 @@ class RemoverKand():
     def __init__(self):
         self.remover = Remover(mode='base')
     def resize_with_padding(self, img, type_img):
-        new_w = img.size[0] * 2
+        new_w = img.size[1] * 2
         new_h = img.size[1] * 2
         border_h = img.size[1]
-        border_w = img.size[0]
+        border_w = (3 * img.size[1] - img.size[0]) // 2
         img.thumbnail((new_w, new_h))
         border_pad = 0
         if type_img == 1:
