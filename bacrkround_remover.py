@@ -6,7 +6,7 @@ class RemoverKand():
     def __init__(self):
         self.remover = Remover(mode='base')
 
-    def resize_with_padding(img, type_img):
+    def resize_with_padding(self, img, type_img):
         max_size = max(img.size[1], img.size[0])
         border_h = (max_size - img.size[1]) // 2
         border_w = (max_size - img.size[0]) // 2
