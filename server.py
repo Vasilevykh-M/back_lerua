@@ -10,6 +10,7 @@ def load_image_into_numpy_array(data):
     npimg = np.frombuffer(data, np.uint8)
     frame = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
     cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+    frame = Image.fromarray(frame)
     return frame
 
 class GenerateApi:
