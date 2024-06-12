@@ -1,6 +1,6 @@
 from PIL import ImageOps, Image
 from transparent_background import Remover
-import torch
+
 
 class RemoverKand():
   def __init__(self):

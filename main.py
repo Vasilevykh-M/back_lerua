@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-import numpy as np
 
 from generator import Generator
 from server import GenerateApi

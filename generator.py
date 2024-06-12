@@ -1,5 +1,3 @@
-from PIL import Image
-import numpy as np
 from bacrkround_remover import RemoverKand
 from clip_ import ClipModel
 

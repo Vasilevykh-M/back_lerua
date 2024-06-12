@@ -1,6 +1,6 @@
-import torch
 import clip
-from PIL import Image
+import torch
+
 
 class ClipModel:
     def __init__(self):

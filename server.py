@@ -1,9 +1,7 @@
-from fastapi import FastAPI, File, UploadFile, APIRouter, HTTPException, status
-import io
-import numpy as np
-from PIL import Image, ImageOps
 import cv2
-from fastapi.openapi.models import Response
+import numpy as np
+from PIL import Image
+from fastapi import File, UploadFile, APIRouter, HTTPException, status
 
 
 def load_image_into_numpy_array(data):
