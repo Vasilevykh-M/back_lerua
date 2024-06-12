@@ -1,7 +1,7 @@
 from PIL import Image
 import numpy as np
 from bacrkround_remover import RemoverKand
-from clip import ClipModel
+from clip_ import ClipModel
 
 
 class Generator:
@@ -12,5 +12,4 @@ class Generator:
   def __call__(self, image):
     class_im, type_im = self.clip(image)
     mask, image = self.remover.remove_backgroud(image, type_im)
-    image = image * (np.array(mask) / 255)
-    return self.model(Image.fromarray(image.astype(np.uint8)), class_im)
+    return self.model(image, mask, class_im)

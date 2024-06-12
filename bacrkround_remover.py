@@ -1,6 +1,4 @@
-from PIL import Image, ImageOps
-import requests
-from io import BytesIO
+from PIL import ImageOps, Image
 from transparent_background import Remover
 import torch
 
@@ -30,4 +28,5 @@ class RemoverKand():
 
   def remove_backgroud(self, img, type_img):
     img = self.resize_with_padding(img, type_img)
+    img = img.resize((512, 512), Image.Resampling.LANCZOS)
     return self.remover.process(img, type='map'), img

@@ -5,7 +5,7 @@ from generator import Generator
 from server import GenerateApi
 
 app = FastAPI()
-func = lambda x, y: x+1
+func = lambda x, y, z: x
 g = Generator(func)
 
 hello = GenerateApi(g)
