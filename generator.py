@@ -1,11 +1,12 @@
 from bacrkround_remover import RemoverKand
 from clip_ import ClipModel
+from config import templates
 from model import InpaintingModel
 
 
 class Generator:
   def __init__(self):
-    self.clip = ClipModel()
+    self.clip = ClipModel(templates)
     self.remover = RemoverKand()
     self.inpainting = InpaintingModel()
   def __call__(self, image):
