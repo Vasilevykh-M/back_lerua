@@ -1,0 +1,55 @@
+- value: "chandeliers for lamps (interior)"
+  promt: "chandeliers for lamps interior inside house"
+  id: 0
+  scale: 0.25
+  padding: 0.75
+- value: "LED chandeliers (interior)"
+  promt: "LED chandeliers interior inside house"
+  id: 1
+  scale: 0.25
+  padding: 0.75
+- value: "street lamp under a lamp"
+  promt: "street lamp under a lamp"
+  id: 2
+  scale: 0.5
+  padding: 0.25
+- value: "LED street lamp"
+  promt: "LED street lamp"
+  id: 3
+  scale: 0.5
+  padding: 0.25
+- value: "street lamp posts (exterior)"
+  promt: "street lamp posts (exterior)"
+  id: 4
+  scale: 0.5
+  padding: 0.25
+- value: "LED panel (interior)"
+  promt: "LED panel (interior)"
+  id: 5
+  scale: 0.25
+  padding: 0.75
+- value: "night light (interior inside the house)"
+  promt: "night light (interior inside the house)"
+  id: 6
+  scale: 0.75
+  padding: 0.0
+- value: "table lamps under a lamp (interior)"
+  promt: "table lamps under a lamp (interior)"
+  id: 7
+  scale: 0.75
+  padding: 0.0
+- value: "LED table lamps"
+  promt: "LED table lamps"
+  id: 8
+  scale: 0.75
+  padding: 0.0
+- value: "Garden furniture"
+  promt: "Garden furniture in the garden"
+  id: 9
+  scale: 0.75
+  padding: 0.0
+- value: "B-B-Q"
+  promt: "B-B-Q in the garden"
+  id: 10
+  scale: 0.75
+  padding: 0.0

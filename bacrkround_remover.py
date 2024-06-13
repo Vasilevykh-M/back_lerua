@@ -11,17 +11,8 @@ class RemoverKand():
         border_h = (max_size - img.size[1]) // 2
         border_w = (max_size - img.size[0]) // 2
 
-        scale = 0.75
-        border_pad = 0.
-        if type_img == 1:
-            scale = 0.25
-            border_pad = 0.75
-        if type_img == 2:
-            scale = 0.5
-            border_pad = 0.25
-        if type_img == 3:
-            scale = 0.75
-            border_pad = 0
+        scale = type_img["scale"]
+        border_pad = type_img["padding"]
 
         border_h += int((1 - scale) * max_size)
         border_w += int((1 - scale) * max_size)
