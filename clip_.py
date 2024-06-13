@@ -9,7 +9,7 @@ class ClipModel:
         self.model, self.preprocess = clip.load("ViT-B/32", device=self.device)
 
         self.data_label = data_label
-        self.text = clip.tokenize(self.data_label).to(self.device)
+        self.text = clip.tokenize([i["value"] for i in self.data_label]).to(self.device)
 
     def __call__(self, image):
         image = self.preprocess(image).unsqueeze(0).to(self.device)
