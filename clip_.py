@@ -15,7 +15,5 @@ class ClipModel:
         image = self.preprocess(image).unsqueeze(0).to(self.device)
         logits_per_image, logits_per_text = self.model(image, self.text)
         idx = torch.argmax(logits_per_image.softmax(dim=-1)).item()
-        for x in self.data_label:
-            if x["id"] == idx:
-                return x
+        return self.data_label[idx]
 
