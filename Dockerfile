@@ -4,7 +4,7 @@ WORKDIR /code
 COPY ./requirements.txt /code/requirements.txt
 
 #
-
+RUN apt install nginx
 
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
