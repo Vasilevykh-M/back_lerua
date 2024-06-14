@@ -7,18 +7,12 @@ from io import BytesIO
 import base64
 
 
-def load_image_into_numpy_array(data):
-    npimg = np.frombuffer(data, np.uint8)
-    frame = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
-    cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-    frame = Image.fromarray(frame)
-    return frame
-
 def image2base64(image):
     buffered = BytesIO()
     image.save(buffered, format="PNG")
     img_str = base64.b64encode(buffered.getvalue()).decode('utf-8')
     return img_str
+
 
 class GenerateApi:
     def __init__(self, generator):
@@ -33,6 +27,7 @@ class GenerateApi:
                 status_code=status.HTTP_415_UNSUPPORTED_MEDIA_TYPE,
                 detail=f'File {img_file.filename} has unsupported extension type',
             )
-        img = load_image_into_numpy_array(await img_file.read())
+        request_object_content = await img_file.read()
+        img = Image.open(BytesIO(request_object_content))
         result_img = self.generator(img)
         return PlainTextResponse(image2base64(result_img))
