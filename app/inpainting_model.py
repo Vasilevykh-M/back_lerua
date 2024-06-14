@@ -8,7 +8,8 @@ class InpaintingModel:
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.model_id = "yahoo-inc/photo-background-generation"
         self.pipeline = DiffusionPipeline.from_pretrained(
-            self.model_id, custom_pipeline=self.model_id)
+            self.model_id, custom_pipeline=self.model_id,
+            cache_dir='/tmp/models')
         self.pipeline = self.pipeline.to(self.device)
 
     def __call__(self, image, mask, class_im):
