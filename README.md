@@ -1,3 +1,6 @@
+# Background generator
+
+
 ### Минимальные системные требования
 NVIDIA GPU с 16gb VRAM и выше
 
