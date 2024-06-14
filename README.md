@@ -1,6 +1,6 @@
 # Background generator
 - yahoo-inc/photo-background-generation генерация фона
-- CLIP генерация промтапо исходномуи изображению
+- CLIP генерация промта по исходномуи изображению
 - InSPyReNet получения маски обьекта на изображкении
 
 
