@@ -1,55 +1,53 @@
-- value: "chandeliers for lamps (interior)"
-  promt: "chandeliers for lamps interior inside house"
-  id: 0
-  scale: 0.25
-  padding: 0.75
-- value: "LED chandeliers (interior)"
-  promt: "LED chandeliers interior inside house"
-  id: 1
-  scale: 0.25
-  padding: 0.75
-- value: "street lamp under a lamp"
-  promt: "street lamp under a lamp"
-  id: 2
+- label: "Ceiling light"
+  prompt: "Good looking room with only one lamp on the ceiling"
+  scale: 0.3
+  y_pos: 0.0
+- label: "Embedded ceiling lamp"
+  prompt: "Good looking room with only one embedded lamp in the ceiling"
+  scale: 0.2
+  y_pos: 0.2
+- label: "Bed lamp"
+  prompt: "Lamp on the cupboard beside the bed"
   scale: 0.5
-  padding: 0.25
-- value: "LED street lamp"
-  promt: "LED street lamp"
-  id: 3
+  y_pos: 0.5
+- label: "Desk lamp"
+  prompt: "Lamp on the desk"
   scale: 0.5
-  padding: 0.25
-- value: "street lamp posts (exterior)"
-  promt: "street lamp posts (exterior)"
-  id: 4
+  y_pos: 0.4
+- label: "Indoor pillar light designed to be mounted on the wall"
+  prompt: "Indoor wall mounted light"
   scale: 0.5
-  padding: 0.25
-- value: "LED panel (interior)"
-  promt: "LED panel (interior)"
-  id: 5
-  scale: 0.25
-  padding: 0.75
-- value: "night light (interior inside the house)"
-  promt: "night light (interior inside the house)"
-  id: 6
+  y_pos: 0.5
+- label: "Outdoor light designed to be mounted on the wall, not prolongated, not tall, small"
+  prompt: "Lamp mounted to the brick wall in the garden"
+  scale: 0.5
+  y_pos: 0.3
+- label: "Outdoor column light, ground mounted, prolongated, tall"
+  prompt: "Outdoor column light mounted to the ground"
   scale: 0.75
-  padding: 0.0
-- value: "table lamps under a lamp (interior)"
-  promt: "table lamps under a lamp (interior)"
-  id: 7
+  y_pos: 0.8
+
+- label: "Grill"
+  prompt: "Grill in the grill area in the garden"
   scale: 0.75
-  padding: 0.0
-- value: "LED table lamps"
-  promt: "LED table lamps"
-  id: 8
+  y_pos: 0.5
+- label: "Swimming pool"
+  prompt: "Swimming pool in the backyard"
   scale: 0.75
-  padding: 0.0
-- value: "Garden furniture"
-  promt: "Garden furniture in the garden"
-  id: 9
+  y_pos: 0.5
+- label: "Outdoor table"
+  prompt: "Garden table on tile floor"
+  scale: 0.5
+  y_pos: 0.7
+- label: "Outdoor chair, not prolongated"
+  prompt: "Garden chair on tile floor"
+  scale: 0.5
+  y_pos: 0.7
+- label: "Outdoor chaise lounge, prolongated chair"
+  prompt: "Chaise lounge in the garden"
   scale: 0.75
-  padding: 0.0
-- value: "B-B-Q"
-  promt: "B-B-Q in the garden"
-  id: 10
+  y_pos: 0.8
+- label: "Garden furniture"
+  prompt: "Furniture in the garden"
   scale: 0.75
-  padding: 0.0
+  y_pos: 0.

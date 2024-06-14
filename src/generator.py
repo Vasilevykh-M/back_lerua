@@ -7,10 +7,11 @@ from config import templates
 class Generator:
     def __init__(self):
         self.clip = ClipModel(templates)
-        self.remover = ImagePreprocessor()
+        self.preprocessor = ImagePreprocessor()
         self.inpainting = InpaintingModel()
 
     def __call__(self, image):
         class_im = self.clip(image)
-        mask, image = self.remover.remove_backgroud(image, class_im)
+        print(class_im)
+        image, mask = self.preprocessor(image, class_im['scale'], class_im['y_pos'])
         return self.inpainting(image, mask, class_im)
