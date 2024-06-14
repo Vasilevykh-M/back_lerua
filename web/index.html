@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Загрузка и просмотр фото</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css">
+  <style>
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .card {
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      padding: 2rem;
+    }
+
+    .input-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .input-group label {
+      margin-right: 1rem;
+      font-weight: 500;
+    }
+
+    .input-group input[type="file"] {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      font-size: 0.875rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .input-group input[type="file"]:focus {
+      outline: none;
+    }
+
+
+    .input-group button:hover {
+      background-color: #6b46c1;
+    }
+
+    .image-preview {
+      display: flex;
+      flex-direction: column;
+      align-items: top;
+      margin-bottom: 1.5rem;
+    }
+
+    .image-preview img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    .image-previews {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start; /* Выравнивание по верхнему краю */
+      margin-bottom: 1.5rem;
+    }
+
+    .image-previews > div {
+      flex-basis: 48%;
+    }
+
+    .image-previews img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-12">
+    <h1 class="text-3xl font-bold mb-6">Загрузка и просмотр фото</h1>
+
+    <div class="card">
+      <div class="input-group">
+        <label for="photoInput" class="mr-4">Выберите фото:</label>
+        <input type="file" id="photoInput" accept="image/*" class="bg-gray-200 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <button onclick="uploadPhoto()" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md ml-4">Загрузить</button>
+      </div>
+
+      <div class="image-previews">
+        <div class="image-preview">
+          <h2 class="text-lg font-bold mb-2">Предварительный просмотр</h2>
+          <img id="previewImage" src="1.JPG" alt="Предварительный просмотр" class="w-full h-64 object-cover rounded-lg shadow-md">
+        </div>
+        <div class="image-preview">
+          <h2 class="text-lg font-bold mb-2">Обработанное изображение</h2>
+          <img id="processedImage" src="2.JPG" alt="Обработанное изображение" class="w-full h-64 object-cover rounded-lg shadow-md">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
