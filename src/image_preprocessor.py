@@ -2,7 +2,7 @@ from PIL import ImageOps, Image
 from transparent_background import Remover
 
 
-class RemoverKand():
+class ImagePreprocessor():
     def __init__(self):
         self.remover = Remover(mode='base')
 

@@ -3,6 +3,7 @@ import torch
 
 
 class ClipModel:
+    
     def __init__(self, data_label):
         # self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.device = "cpu"
@@ -10,6 +11,7 @@ class ClipModel:
 
         self.data_label = data_label
         self.text = clip.tokenize([i["value"] for i in self.data_label]).to(self.device)
+
 
     def __call__(self, image):
         image = self.preprocess(image).unsqueeze(0).to(self.device)
